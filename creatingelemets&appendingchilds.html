@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="hi">Hi this is srijan</p>
+    <p class="hello">i m fantastic</p>
+
+    <h1>below are all the javascript results</h1>
+</body>
+
+<script>
+
+// HERE PARA IS THE PARENT ELEMENT.
+// HERE TEXT IS THE CHILD ELEMENT.
+
+    var para = document.createElement("p");  // CREATING A PARENT ELEMENT USING createElement
+    var text = document.createTextNode("inside the newly created para");  // CREATING A CHILD NODE USING createTextNode
+    //var data = document.getElementById("hi").innerHTML;    --> THIS WILL GIVE ERROR AS IT IS NOT A NODE
+    
+    para.appendChild(text);  // APPENDING CHILD TO PARENT
+    
+    document.body.appendChild(para);  // APPENDING THE PARENT ELEMENT TO THE BODY SECTION OF THE DOM.
+
+
+
+
+
+
+
+
+// ACCESSING FIRST AND LAST CHILD OF A PARENT.
+// HERE WE ARE TAKING THE BODY AS THE PARENT.
+//SYNTAX - document.--name of the parent--.firstChild; 
+
+var fc = document.body.firstChild;
+console.log(fc);
+
+
+
+// FINDING THE SIBLINGS OF AN ELEMENT
+// -> for first sibling - 
+var fs = hi.nextElementSibling;
+var parent = hi.parentNode;
+console.log(fs); // this will display the paragraph with class hello as it is the next element after p with id hi
+console.log(parent); // this will return body as body is the parent for all these elements
+</script>
+</html>
